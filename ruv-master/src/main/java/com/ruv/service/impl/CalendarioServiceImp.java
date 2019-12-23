@@ -6,26 +6,31 @@
 package com.ruv.service.impl;
 
 import com.ruv.entity.CalendarioEntity;
+import com.ruv.repository.CalendarioRepository;
 import com.ruv.service.CalendarioService;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
  *
  * @author matias
+ *
  */
-public class CalendarioServiceImp  implements CalendarioService {
-    private List<CalendarioEntity> calendarios = null;
+@Service
+public class CalendarioServiceImp implements CalendarioService{
 
-    public CalendarioServiceImp() {
-        calendarios = new LinkedList<CalendarioEntity>();
-            
+@Autowired
+private CalendarioRepository repositorio;
+
+@Override
+public List<CalendarioEntity> getCalendario() {
+    List<CalendarioEntity> listaDao = new ArrayList<>();
+    repositorio.findAll().forEach(obj -> listaDao.add(obj));
+    return listaDao;
 }
-
-    @Override
-    public List<CalendarioEntity> getCalendario() {
-     return calendarios;
-    }
 }
