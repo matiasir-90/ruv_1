@@ -15,7 +15,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author matias
  */
 
-    
+// This class will manage calendars.
 @Entity
 @Table(name = "dim_calendario")
 public class CalendarioEntity implements Serializable {

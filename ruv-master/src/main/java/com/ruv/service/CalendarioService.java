@@ -16,5 +16,9 @@ import java.util.List;
 public interface CalendarioService {
 
 	List<CalendarioEntity> getCalendario();
+	CalendarioEntity add(CalendarioEntity p);
+	CalendarioEntity listarId(int id);
+	CalendarioEntity edit(CalendarioEntity p);
+	CalendarioEntity delete(int id);
 }
 
