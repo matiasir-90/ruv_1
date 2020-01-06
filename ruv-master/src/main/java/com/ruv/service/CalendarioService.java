@@ -6,6 +6,8 @@
 package com.ruv.service;
 
 import com.ruv.entity.CalendarioEntity;
+import com.ruv.model.CalendarioModel;
+
 import java.util.List;
 
 /**
@@ -15,10 +17,10 @@ import java.util.List;
    
 public interface CalendarioService {
 
-	List<CalendarioEntity> getCalendario();
-	CalendarioEntity add(CalendarioEntity p);
+	List<CalendarioModel> getCalendario();
+	CalendarioEntity add(CalendarioModel p);
 	CalendarioEntity listarId(int id);
-	CalendarioEntity edit(CalendarioEntity p);
+	CalendarioEntity edit(CalendarioModel p);
 	CalendarioEntity delete(int id);
 }
 

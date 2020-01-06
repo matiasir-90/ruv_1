@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ruv.entity.CalendarioEntity;
+import com.ruv.model.CalendarioModel;
 import com.ruv.service.CalendarioService;
 
 @RestController
@@ -21,29 +22,29 @@ import com.ruv.service.CalendarioService;
 public class CalendarioController {
 
 @Autowired
-CalendarioService servicec;
+CalendarioService service;
 
 @GetMapping
-public List<CalendarioEntity>getcalendario(){
+public List<CalendarioModel> getcalendario(){
     
-    return servicec.getCalendario();
+    return service.getCalendario();
 }
 @PostMapping
-public CalendarioEntity agregarC(@RequestBody CalendarioEntity p){
-    return servicec.add(p);
+public CalendarioEntity agregarC(@RequestBody CalendarioModel p){
+    return service.add(p);
 }
 @GetMapping(path = {"/{id}"})
 public CalendarioEntity listarId(@PathVariable("id")int id){
-    return servicec.listarId(id);
+    return service.listarId(id);
 }
 @PutMapping(path = {"/{id}"})
-public CalendarioEntity editar(@RequestBody CalendarioEntity p,@PathVariable("id") int id){
-    p.setCalendario_id(id);
-    return servicec.edit(p);
+public CalendarioEntity editar(@RequestBody CalendarioModel p,@PathVariable("id") int id){
+    p.setId(id);
+    return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})
 public CalendarioEntity delete(@PathVariable("id") int  id){
-    return servicec.delete(id);
+    return service.delete(id);
 }
 
 }

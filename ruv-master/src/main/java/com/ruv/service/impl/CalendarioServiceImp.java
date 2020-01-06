@@ -6,6 +6,7 @@
 package com.ruv.service.impl;
 
 import com.ruv.entity.CalendarioEntity;
+import com.ruv.model.CalendarioModel;
 import com.ruv.repository.CalendarioRepository;
 import com.ruv.service.CalendarioService;
 
@@ -29,12 +30,29 @@ public class CalendarioServiceImp implements CalendarioService{
 private CalendarioRepository repositorio;
 
 @Override
-public List<CalendarioEntity> getCalendario() {
-    List<CalendarioEntity> listaDao = new ArrayList<>();
-    repositorio.findAll().forEach(obj -> listaDao.add(obj));
+public List<CalendarioModel> getCalendario() {
+    List<CalendarioModel> listaDao = new ArrayList<>();
+    repositorio.findAll().forEach(obj -> listaDao.add(toModel(obj)));
     return listaDao;
 }
 
+private CalendarioModel toModel(CalendarioEntity entity) {
+	CalendarioModel model = new CalendarioModel();
+	model.setId(entity.getCalendario_id());
+	model.setCalendarioDescripcion(entity.getCalendario_desce());
+	model.setFechaInicio(entity.getFecha_inicio());
+	model.setFechaFin(entity.getFecha_fin());
+	return model;
+}
+
+private CalendarioEntity toEntity(CalendarioModel model) {
+	CalendarioEntity entity = new CalendarioEntity();
+	entity.setCalendario_id(model.getId());
+	entity.setCalendario_desce(model.getCalendarioDescripcion());
+	entity.setFecha_inicio(model.getFechaInicio());
+	entity.setFecha_fin(model.getFechaFin());
+	return entity;
+}
 @Override
 public CalendarioEntity listarId(int id) {
     Optional<CalendarioEntity> optional = repositorio.findById(id);
@@ -44,12 +62,14 @@ public CalendarioEntity listarId(int id) {
     return null;
 }
 @Override
-public CalendarioEntity add(CalendarioEntity p) {
-    return repositorio.save(p);
+public CalendarioEntity add(CalendarioModel p) {
+	CalendarioEntity entity = toEntity(p);
+    return repositorio.save(entity);
 }
 @Override
-public CalendarioEntity edit(CalendarioEntity p) {
-    return repositorio.save(p);    }
+public CalendarioEntity edit(CalendarioModel p) {
+	CalendarioEntity entity = toEntity(p);
+    return repositorio.save(entity);    }
 
 @Override
 public CalendarioEntity delete(int id) {
