@@ -5,7 +5,7 @@
  */
 package com.ruv.repository;
 
-import com.ruv.entity.CalendarioEntity;
+import com.ruv.entity.CampaniaEntity;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -13,6 +13,6 @@ import org.springframework.data.repository.CrudRepository;
  * @author matias
  */
 
-public interface CalendarioRepository extends CrudRepository<CalendarioEntity, Integer> {
+public interface CampaniaRepository extends CrudRepository<CampaniaEntity, Integer> {
 	
 }
