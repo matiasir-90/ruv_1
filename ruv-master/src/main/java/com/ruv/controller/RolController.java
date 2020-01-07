@@ -12,38 +12,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ruv.entity.CampaniaEntity;
-import com.ruv.model.CampaniaModel;
-import com.ruv.service.CampaniaService;
+import com.ruv.entity.CalendarioEntity;
+import com.ruv.entity.RolEntity;
+import com.ruv.model.CalendarioModel;
+import com.ruv.model.RolModel;
+import com.ruv.service.CalendarioService;
+import com.ruv.service.RolService;
 
 @RestController
-@RequestMapping({"/campania"})
+@RequestMapping({"/rol"})
 
-public class CampaniaController {
+public class RolController {
 
 @Autowired
-CampaniaService service;
+RolService service;
 
 @GetMapping
-public List<CampaniaModel> getCampania(){
+public List<RolModel> getRol(){
     
-    return service.getCampania();
+    return service.getRol();
 }
 @PostMapping
-public CampaniaEntity agregarC(@RequestBody CampaniaModel p){
+public RolEntity agregarC(@RequestBody RolModel p){
     return service.add(p);
 }
 @GetMapping(path = {"/{id}"})
-public CampaniaEntity lsitarId(@PathVariable("id")int id){
+public RolEntity listarId(@PathVariable("id")int id){
     return service.listarId(id);
 }
 @PutMapping(path = {"/{id}"})
-public CampaniaEntity editar(@RequestBody CampaniaModel p,@PathVariable("id") int id){
+public RolEntity editar(@RequestBody RolModel p,@PathVariable("id") int id){
     p.setId(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})
-public CampaniaEntity delete(@PathVariable("id") int  id){
+public RolEntity delete(@PathVariable("id") int  id){
     return service.delete(id);
 }
 

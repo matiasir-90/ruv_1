@@ -25,7 +25,7 @@ public class CampaniaServiceImp implements CampaniaService{
 private CampaniaRepository repositorio;
 
 @Override
-public List<CampaniaModel> getCalendario() {
+public List<CampaniaModel> getCampania() {
     List<CampaniaModel> listaDao = new ArrayList<>();
     repositorio.findAll().forEach(obj -> listaDao.add(toModel(obj)));
     return listaDao;

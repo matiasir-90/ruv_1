@@ -13,7 +13,7 @@ public interface CampaniaService {
 	 */
 	   
 
-		List<CampaniaModel> getCalendario();
+		List<CampaniaModel> getCampania();
 		CampaniaEntity add(CampaniaModel p);
 		CampaniaEntity listarId(int id);
 		CampaniaEntity edit(CampaniaModel p);
