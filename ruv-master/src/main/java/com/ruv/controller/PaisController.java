@@ -12,38 +12,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ruv.entity.RolEntity;
-import com.ruv.model.RolModel;
-import com.ruv.service.RolService;
+import com.ruv.entity.PaisEntity;
+import com.ruv.model.PaisModel;
+import com.ruv.service.PaisService;
 
 @RestController
-@RequestMapping({"/rol"})
+@RequestMapping({"/pais"})
 
-public class RolController {
+public class PaisController {
 
 @Autowired
-RolService service;
+PaisService service;
 
 @GetMapping
-public List<RolModel> getRol(){
+public List<PaisModel> getPais(){
     
-    return service.getRol();
+    return service.getPais();
 }
 @PostMapping
-public RolEntity agregar(@RequestBody RolModel p){
+public PaisEntity agregar(@RequestBody PaisModel p){
     return service.add(p);
 }
 @GetMapping(path = {"/{id}"})
-public RolEntity listarId(@PathVariable("id")int id){
+public PaisEntity listarId(@PathVariable("id")int id){
     return service.listarId(id);
 }
 @PutMapping(path = {"/{id}"})
-public RolEntity editar(@RequestBody RolModel p,@PathVariable("id") int id){
+public PaisEntity editar(@RequestBody PaisModel p,@PathVariable("id") int id){
     p.setId(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})
-public RolEntity delete(@PathVariable("id") int  id){
+public PaisEntity delete(@PathVariable("id") int  id){
     return service.delete(id);
 }
 

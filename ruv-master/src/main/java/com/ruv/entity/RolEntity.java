@@ -25,7 +25,7 @@ import javax.persistence.Table;
 	    private Integer rol_id;
 	    @Basic(optional = false)
 	    @Column(name = "rol_desc")
-	    private String rol_desce;
+	    private String rol_desc;
 	    
 	    public RolEntity() {
 	    }
@@ -39,11 +39,11 @@ import javax.persistence.Table;
 		}
 
 		public String getRol_desc() {
-			return rol_desce;
+			return rol_desc;
 		}
 
-		public void setRol_desc(String rol_desce) {
-			this.rol_desce = rol_desce;
+		public void setRol_desc(String rol_desc) {
+			this.rol_desc = rol_desc;
 		}
 
 

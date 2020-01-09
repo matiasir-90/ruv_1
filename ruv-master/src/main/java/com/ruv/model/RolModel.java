@@ -16,7 +16,7 @@ public class RolModel {
 	public String getRolDescripcion() {
 		return rolDescripcion;
 	}
-	public void setRolDescripcion(String rolDescripcion) {
-		this.rolDescripcion = rolDescripcion;
+	public void setRolDescripcion(String rol_desce) {
+		this.rolDescripcion = rol_desce;
 	}
 }
