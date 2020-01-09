@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -23,8 +25,35 @@ import javax.persistence.Table;
 	    @Basic(optional = false)
 	    @Column(name = "localidad_desc")
 	    private String localidad_desc;
-	    
-	    public LocalidadEntity() {
+	    @ManyToOne(optional=false) 
+	     @JoinColumn(name="provincia_id", nullable=false, updatable=false)
+	     private  ProvinciaEntity provincia ;
+
+	    public Integer getLocalidad_id() {
+			return localidad_id;
+		}
+
+		public void setLocalidad_id(Integer localidad_id) {
+			this.localidad_id = localidad_id;
+		}
+
+		public String getLocalidad_desc() {
+			return localidad_desc;
+		}
+
+		public void setLocalidad_desc(String localidad_desc) {
+			this.localidad_desc = localidad_desc;
+		}
+
+		public ProvinciaEntity getProvincia() {
+			return provincia;
+		}
+
+		public void setProvincia(ProvinciaEntity provincia) {
+			this.provincia = provincia;
+		}
+
+		public LocalidadEntity() {
 	    }
 	  
 
