@@ -52,6 +52,13 @@ private UsuarioEntity toEntity(UsuarioModel model) {
 	UsuarioEntity entity = new UsuarioEntity();
 	entity.setUsuario_id(model.getId());
 	entity.setUsuario_desc(model.getUsuarioDescripcion());
+	entity.setRol(model.getRol_id());
+	entity.setPassword(model.getPassword());
+	entity.setMail(model.getMail());
+	entity.setFecha_alta(model.getFecha_alta());
+	entity.setFecha_baja(model.getFecha_baja());
+	entity.setContador(model.getContador());
+	entity.setHabilitado(model.getHabilitado());
 	return entity;
 }
 @Override
