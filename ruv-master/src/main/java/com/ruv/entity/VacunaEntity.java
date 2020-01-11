@@ -36,7 +36,7 @@ import javax.persistence.Table;
 	    @Column(name = "formula")
 	    private String formula;
 	    @Basic(optional = false)
-	    @Column(name = "obsevaciones")
+	    @Column(name = "observaciones")
 	    private String observaciones; 
 	    
 	    @Basic(optional = false)
@@ -49,7 +49,7 @@ import javax.persistence.Table;
 	    @Column(name = "fecha_baja")
 	    private Date fecha_baja;
 	    @Basic(optional = false)
-	    @Column(name = "fecha_ult_mod")
+	    @Column(name = "fecha_ult_md")
 	    private Date fecha_ult_mod;
 		public VacunaEntity() {
 	    }
