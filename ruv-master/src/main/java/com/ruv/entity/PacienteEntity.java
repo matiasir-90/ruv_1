@@ -41,12 +41,7 @@ import javax.persistence.Table;
 	    @ManyToOne(optional=false) 
 	     @JoinColumn(name="localidad_id", nullable=false, updatable=false)
 	     private  LocalidadEntity localidad ;
-	    @ManyToOne(optional=false) 
-	     @JoinColumn(name="provincia_id", nullable=false, updatable=false)
-	     private ProvinciaEntity provincia;
-	    @ManyToOne(optional=false) 
-	     @JoinColumn(name="pais_id", nullable=false, updatable=false)
-	     private  PaisEntity pais ;
+	    
 	    
 		public PacienteEntity() {
 	    }
@@ -91,17 +86,5 @@ import javax.persistence.Table;
 		}
 		public void setLocalidad(LocalidadEntity localidad) {
 			this.localidad = localidad;
-		}
-		public ProvinciaEntity getProvincia() {
-			return provincia;
-		}
-		public void setProvincia(ProvinciaEntity provincia) {
-			this.provincia = provincia;
-		}
-		public PaisEntity getPais() {
-			return pais;
-		}
-		public void setPais(PaisEntity pais) {
-			this.pais = pais;
 		}
 }

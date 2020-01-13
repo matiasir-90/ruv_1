@@ -2,8 +2,6 @@ package com.ruv.model;
 
 
 import com.ruv.entity.LocalidadEntity;
-import com.ruv.entity.PaisEntity;
-import com.ruv.entity.ProvinciaEntity;
 
 public class VacunatorioModel {
 
@@ -12,9 +10,6 @@ public class VacunatorioModel {
 	private String vacunatorio_desc;
 	private String direccion;
 	private LocalidadEntity localidad ;
-	private ProvinciaEntity provincia;
-	private PaisEntity pais ;
-	
 	
 	public int getId() {
 		return id;
@@ -40,17 +35,5 @@ public class VacunatorioModel {
 	}
 	public void setLocalidad(LocalidadEntity localidad) {
 		this.localidad = localidad;
-	}
-	public ProvinciaEntity getProvincia() {
-		return provincia;
-	}
-	public void setProvincia(ProvinciaEntity provincia) {
-		this.provincia = provincia;
-	}
-	public PaisEntity getPais() {
-		return pais;
-	}
-	public void setPais(PaisEntity pais) {
-		this.pais = pais;
 	}
 }
