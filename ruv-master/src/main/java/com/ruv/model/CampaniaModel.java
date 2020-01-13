@@ -18,8 +18,8 @@ public class CampaniaModel {
 	public String getCampaniaDescripcion() {
 		return campaniaDescripcion;
 	}
-	public void setCampaniaDescripcion(String calendarioDescripcion) {
-		this.campaniaDescripcion = calendarioDescripcion;
+	public void setCampaniaDescripcion(String campaniaDescripcion) {
+		this.campaniaDescripcion = campaniaDescripcion;
 	}
 	public Date getFechaAlta() {
 		return fechaAlta;
