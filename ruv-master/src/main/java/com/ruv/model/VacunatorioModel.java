@@ -9,6 +9,7 @@ public class VacunatorioModel {
 	private int id;
 	private String vacunatorio_desc;
 	private String direccion;
+	private String cod_postal;
 	private LocalidadEntity localidad ;
 	
 	public int getId() {
@@ -35,5 +36,11 @@ public class VacunatorioModel {
 	}
 	public void setLocalidad(LocalidadEntity localidad) {
 		this.localidad = localidad;
+	}
+	public String getCod_postal() {
+		return cod_postal;
+	}
+	public void setCod_postal(String cod_postal) {
+		this.cod_postal = cod_postal;
 	}
 }

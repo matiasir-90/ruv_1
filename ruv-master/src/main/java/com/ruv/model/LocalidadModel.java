@@ -7,7 +7,7 @@ public class LocalidadModel {
 	
 	private int id;
 	private String localidadDescripcion;
-	private ProvinciaEntity provincia_id;
+	private ProvinciaEntity provincia;
 	
 	
 	public int getId() {
@@ -22,10 +22,10 @@ public class LocalidadModel {
 	public void setLocalidadDescripcion(String localidad_desc) {
 		this.localidadDescripcion = localidad_desc;
 	}
-	public ProvinciaEntity getProvincia_id() {
-		return provincia_id;
+	public ProvinciaEntity getProvincia() {
+		return provincia;
 	}
-	public void setPais_id(ProvinciaEntity provincia_id) {
-		this.provincia_id = provincia_id;
+	public void setProvincia (ProvinciaEntity provincia_id) {
+		this.provincia= provincia_id;
 	}
 }

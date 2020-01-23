@@ -39,7 +39,7 @@ private ProvinciaModel toModel(ProvinciaEntity entity) {
 	ProvinciaModel model = new ProvinciaModel();
 	model.setId(entity.getProvincia_id());
 	model.setProvinciaDescripcion(entity.getProvincia_desc());
-	model.setPais_id(entity.getPais());
+	model.setPais(entity.getPais());
 	return model;
 }
 
@@ -47,6 +47,7 @@ private ProvinciaEntity toEntity(ProvinciaModel model) {
 	ProvinciaEntity entity = new ProvinciaEntity();
 	entity.setProvincia_id(model.getId());
 	entity.setProvincia_desc(model.getProvinciaDescripcion());
+	entity.setPais(model.getPais());
 	return entity;
 }
 @Override

@@ -40,6 +40,7 @@ private VacunatorioModel toModel(VacunatorioEntity entity) {
 	model.setId(entity.getVacunatorio_id());
 	model.setVacunatorio_desc(entity.getVacunatorio_desc());
 	model.setDireccion(entity.getDireccion());
+	model.setCod_postal(entity.getCod_postal());
 	model.setLocalidad(entity.getLocalidad());
 	return model;
 }
@@ -49,6 +50,7 @@ private VacunatorioEntity toEntity(VacunatorioModel model) {
 	entity.setVacunatorio_id(model.getId());
 	entity.setVacunatorio_desc(model.getVacunatorio_desc());
 	entity.setDireccion(model.getDireccion());
+	entity.setCod_postal(model.getCod_postal());
 	entity.setLocalidad(model.getLocalidad());
 	
 	return entity;

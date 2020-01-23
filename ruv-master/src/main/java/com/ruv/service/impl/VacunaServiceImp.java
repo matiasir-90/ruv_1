@@ -51,11 +51,18 @@ private VacunaModel toModel(VacunaEntity entity) {
 	return model;
 }
 
+
 private VacunaEntity toEntity(VacunaModel model) {
 	VacunaEntity entity = new VacunaEntity();
 	entity.setVacuna_id(model.getVacuna_id());
 	entity.setVacuna_desc(model.getVacuna_desc());
-
+	entity.setDetalle(model.getDetalle());
+	entity.setFormula(model.getFormula());
+	entity.setObservaciones(model.getObservaciones());
+	entity.setCalendario(model.getCalendario());
+	entity.setFecha_inicio(model.getFecha_alta());
+	entity.setFecha_baja(model.getFecha_baja());
+	entity.setFecha_ult_mod(model.getFecha_ult_mod());
 	return entity;
 }
 @Override

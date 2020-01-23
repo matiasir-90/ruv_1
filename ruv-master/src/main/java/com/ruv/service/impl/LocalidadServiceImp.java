@@ -39,7 +39,7 @@ private LocalidadModel toModel(LocalidadEntity entity) {
 	LocalidadModel model = new LocalidadModel();
 	model.setId(entity.getLocalidad_id());
 	model.setLocalidadDescripcion(entity.getLocalidad_desc());
-	model.setPais_id(entity.getProvincia());
+	model.setProvincia(entity.getProvincia());
 	return model;
 }
 
@@ -47,6 +47,7 @@ private LocalidadEntity toEntity(LocalidadModel model) {
 	LocalidadEntity entity = new LocalidadEntity();
 	entity.setLocalidad_id(model.getId());
 	entity.setLocalidad_desc(model.getLocalidadDescripcion());
+	entity.setProvincia(model.getProvincia());
 	return entity;
 }
 @Override
