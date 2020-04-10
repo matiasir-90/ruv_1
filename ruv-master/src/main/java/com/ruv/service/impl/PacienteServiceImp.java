@@ -40,6 +40,7 @@ private PacienteModel toModel(PacienteEntity entity) {
 	model.setId(entity.getPaciente_id());
 	model.setPaciente_desc(entity.getPaciente_desc());
 	model.setDni(entity.getDni());
+	model.setFecha_nac(entity.getFecha_nac());
 	model.setDireccion(entity.getDireccion());
 	model.setCod_postal(entity.getCod_postal());
 	model.setLocalidad(entity.getLocalidad());
@@ -51,6 +52,7 @@ private PacienteEntity toEntity(PacienteModel model) {
 	entity.setPaciente_id(model.getId());
 	entity.setPaciente_desc(model.getPaciente_desc());
 	entity.setDni(model.getDni());
+	entity.setFecha_nac(model.getFecha_nac());
 	entity.setDireccion(model.getDireccion());
 	entity.setCod_postal(model.getCod_postal());
 	entity.setLocalidad(model.getLocalidad());

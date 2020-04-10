@@ -4,33 +4,35 @@ import java.util.Date;
 
 public class CalendarioModel {
 	
-	private int id;
-	private String calendarioDescripcion;
-	private Date fechaInicio;
-	private Date fechaFin;
+	private int calendario_id;
+
+	private String calendario_desce;
+	private Date fecha_inicio;
+	private Date fecha_fin;
 	
-	public int getId() {
-		return id;
+	public int getCalendario_id() {
+		return calendario_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCalendario_id(int calendario_id) {
+		this.calendario_id = calendario_id;
 	}
-	public String getCalendarioDescripcion() {
-		return calendarioDescripcion;
+	public String getCalendario_desce() {
+		return calendario_desce;
 	}
-	public void setCalendarioDescripcion(String calendarioDescripcion) {
-		this.calendarioDescripcion = calendarioDescripcion;
+	public void setCalendario_desce(String calendario_desce) {
+		this.calendario_desce = calendario_desce;
 	}
-	public Date getFechaInicio() {
-		return fechaInicio;
+	public Date getFecha_inicio() {
+		return fecha_inicio;
 	}
-	public void setFechaInicio(Date fechaInicio) {
-		this.fechaInicio = fechaInicio;
+	public void setFecha_inicio(Date fecha_inicio) {
+		this.fecha_inicio = fecha_inicio;
 	}
-	public Date getFechaFin() {
-		return fechaFin;
+	public Date getFecha_fin() {
+		return fecha_fin;
 	}
-	public void setFechaFin(Date fechaFin) {
-		this.fechaFin = fechaFin;
+	public void setFecha_fin(Date fecha_fin) {
+		this.fecha_fin = fecha_fin;
 	}
+	
 }
