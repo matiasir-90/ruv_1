@@ -37,16 +37,16 @@ public List<LocalidadModel> getLocalidad() {
 
 private LocalidadModel toModel(LocalidadEntity entity) {
 	LocalidadModel model = new LocalidadModel();
-	model.setId(entity.getLocalidad_id());
-	model.setLocalidadDescripcion(entity.getLocalidad_desc());
+	model.setLocalidad_id(entity.getLocalidad_id());
+	model.setLocalidad_desc(entity.getLocalidad_desc());
 	model.setProvincia(entity.getProvincia());
 	return model;
 }
 
 private LocalidadEntity toEntity(LocalidadModel model) {
 	LocalidadEntity entity = new LocalidadEntity();
-	entity.setLocalidad_id(model.getId());
-	entity.setLocalidad_desc(model.getLocalidadDescripcion());
+	entity.setLocalidad_id(model.getLocalidad_id());
+	entity.setLocalidad_desc(model.getLocalidad_desc());
 	entity.setProvincia(model.getProvincia());
 	return entity;
 }

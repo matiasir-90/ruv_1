@@ -37,7 +37,7 @@ public List<DetalleVacunacionModel> getDetalleVacunacion() {
 
 private DetalleVacunacionModel toModel(DetalleVacunacionEntity entity) {
 	DetalleVacunacionModel model = new DetalleVacunacionModel();
-	model.setId(entity.getDet_vac_id());
+	model.setDet_vac_id(entity.getDet_vac_id());
 	model.setPaciente_id(entity.getPaciente_id());
 	model.setVacuna_id(entity.getVacuna_id());
 	model.setCalendario_id(entity.getCalendario_id());
@@ -49,7 +49,7 @@ private DetalleVacunacionModel toModel(DetalleVacunacionEntity entity) {
 
 private DetalleVacunacionEntity toEntity(DetalleVacunacionModel model) {
 	DetalleVacunacionEntity entity = new DetalleVacunacionEntity();
-	entity.setDet_vac_id(model.getId());
+	entity.setDet_vac_id(model.getDet_vac_id());
 	entity.setPaciente_id(model.getPaciente_id());
 	entity.setVacuna_id(model.getVacuna_id());
 	entity.setCalendario_id(model.getCalendario_id());

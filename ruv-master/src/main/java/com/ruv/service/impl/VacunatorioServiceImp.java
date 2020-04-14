@@ -37,7 +37,7 @@ public List<VacunatorioModel> getVacunatorio() {
 
 private VacunatorioModel toModel(VacunatorioEntity entity) {
 	VacunatorioModel model = new VacunatorioModel();
-	model.setId(entity.getVacunatorio_id());
+	model.setVacunatorio_id(entity.getVacunatorio_id());
 	model.setVacunatorio_desc(entity.getVacunatorio_desc());
 	model.setDireccion(entity.getDireccion());
 	model.setCod_postal(entity.getCod_postal());
@@ -47,7 +47,7 @@ private VacunatorioModel toModel(VacunatorioEntity entity) {
 
 private VacunatorioEntity toEntity(VacunatorioModel model) {
 	VacunatorioEntity entity = new VacunatorioEntity();
-	entity.setVacunatorio_id(model.getId());
+	entity.setVacunatorio_id(model.getVacunatorio_id());
 	entity.setVacunatorio_desc(model.getVacunatorio_desc());
 	entity.setDireccion(model.getDireccion());
 	entity.setCod_postal(model.getCod_postal());

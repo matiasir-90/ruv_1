@@ -39,7 +39,7 @@ public VacunatorioEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public VacunatorioEntity editar(@RequestBody VacunatorioModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setVacunatorio_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

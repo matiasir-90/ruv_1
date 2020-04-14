@@ -39,7 +39,7 @@ public ProvinciaEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public ProvinciaEntity editar(@RequestBody ProvinciaModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setProvincia_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

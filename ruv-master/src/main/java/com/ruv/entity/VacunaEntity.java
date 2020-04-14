@@ -51,6 +51,9 @@ import javax.persistence.Table;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_ult_md")
 	    private Date fecha_ult_mod;
+	    
+	    
+	    
 		public VacunaEntity() {
 	    }
 		public Integer getVacuna_id() {

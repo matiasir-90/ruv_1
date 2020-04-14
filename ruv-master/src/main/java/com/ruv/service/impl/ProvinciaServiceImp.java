@@ -37,16 +37,16 @@ public List<ProvinciaModel> getProvincia() {
 
 private ProvinciaModel toModel(ProvinciaEntity entity) {
 	ProvinciaModel model = new ProvinciaModel();
-	model.setId(entity.getProvincia_id());
-	model.setProvinciaDescripcion(entity.getProvincia_desc());
+	model.setProvincia_id(entity.getProvincia_id());
+	model.setProvincia_desc(entity.getProvincia_desc());
 	model.setPais(entity.getPais());
 	return model;
 }
 
 private ProvinciaEntity toEntity(ProvinciaModel model) {
 	ProvinciaEntity entity = new ProvinciaEntity();
-	entity.setProvincia_id(model.getId());
-	entity.setProvincia_desc(model.getProvinciaDescripcion());
+	entity.setProvincia_id(model.getProvincia_id());
+	entity.setProvincia_desc(model.getProvincia_desc());
 	entity.setPais(model.getPais());
 	return entity;
 }

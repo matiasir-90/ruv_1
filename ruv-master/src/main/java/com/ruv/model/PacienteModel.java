@@ -7,7 +7,7 @@ import com.ruv.entity.LocalidadEntity;
 public class PacienteModel {
 
 
-	private int id;
+	private int paciente_id;
 	private String paciente_desc;
 	private String dni;
 	private Date fecha_nac;
@@ -16,11 +16,12 @@ public class PacienteModel {
 	private LocalidadEntity localidad ;
 	
 	
-	public int getId() {
-		return id;
+
+	public int getPaciente_id() {
+		return paciente_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setPaciente_id(int paciente_id) {
+		this.paciente_id = paciente_id;
 	}
 	public String getPaciente_desc() {
 		return paciente_desc;

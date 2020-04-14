@@ -37,14 +37,14 @@ public List<PaisModel> getPais() {
 
 private PaisModel toModel(PaisEntity entity) {
 	PaisModel model = new PaisModel();
-	model.setId(entity.getPais_id());
+	model.setPais_id(entity.getPais_id());
 	model.setPaisDescripcion(entity.getPais_desc());
 	return model;
 }
 
 private PaisEntity toEntity(PaisModel model) {
 	PaisEntity entity = new PaisEntity();
-	entity.setPais_id(model.getId());
+	entity.setPais_id(model.getPais_id());
 	entity.setPais_desc(model.getPaisDescripcion());
 	return entity;
 }

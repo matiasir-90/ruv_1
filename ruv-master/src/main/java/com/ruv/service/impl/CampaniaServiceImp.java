@@ -33,19 +33,19 @@ public List<CampaniaModel> getCampania() {
 
 private CampaniaModel toModel(CampaniaEntity entity) {
 	CampaniaModel model = new CampaniaModel();
-	model.setId(entity.getCampania_id());
-	model.setCampaniaDescripcion(entity.getCampania_desce());
-	model.setFechaAlta(entity.getFecha_alta());
-	model.setFechaBaja(entity.getFecha_baja());
+	model.setCampania_id(entity.getCampania_id());
+	model.setCampania_desce(entity.getCampania_desce());
+	model.setFecha_alta(entity.getFecha_alta());
+	model.setFecha_baja(entity.getFecha_baja());
 	return model;
 }
 
 private CampaniaEntity toEntity(CampaniaModel model) {
 	CampaniaEntity entity = new CampaniaEntity();
-	entity.setCampania_id(model.getId());
-	entity.setCampania_desce(model.getCampaniaDescripcion());
-	entity.setFecha_alta(model.getFechaAlta());
-	entity.setFecha_baja(model.getFechaBaja());
+	entity.setCampania_id(model.getCampania_id());
+	entity.setCampania_desce(model.getCampania_desce());
+	entity.setFecha_alta(model.getFecha_alta());
+	entity.setFecha_baja(model.getFecha_baja());
 	return entity;
 }
 @Override

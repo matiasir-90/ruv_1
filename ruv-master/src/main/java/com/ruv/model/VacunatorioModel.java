@@ -6,17 +6,18 @@ import com.ruv.entity.LocalidadEntity;
 public class VacunatorioModel {
 
 
-	private int id;
+	private int vacunatorio_id;
 	private String vacunatorio_desc;
 	private String direccion;
 	private String cod_postal;
 	private LocalidadEntity localidad ;
 	
-	public int getId() {
-		return id;
+
+	public int getVacunatorio_id() {
+		return vacunatorio_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setVacunatorio_id(int vacunatorio_id) {
+		this.vacunatorio_id = vacunatorio_id;
 	}
 	public String getVacunatorio_desc() {
 		return vacunatorio_desc;

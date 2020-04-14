@@ -10,20 +10,20 @@ import com.ruv.entity.VacunaEntity;
 public class DetalleVacunacionModel {
 
 
-	private int id;
+	private int det_vac_id;
 	private PacienteEntity paciente_id;
 	private VacunaEntity vacuna_id;
 	private String calendario_id;
 	private Date fecha_aplicacion;
 	private String campania_id;
 	private  UsuarioEntity usuario_id;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 
+	public int getDet_vac_id() {
+		return det_vac_id;
+	}
+	public void setDet_vac_id(int det_vac_id) {
+		this.det_vac_id = det_vac_id;
+	}
 	public PacienteEntity getPaciente_id() {
 		return paciente_id;
 	}

@@ -4,33 +4,33 @@ import java.util.Date;
 public class CampaniaModel {
 
 	
-	private int id;
-	private String campaniaDescripcion;
-	private Date fechaAlta;
-	private Date fechaBaja;
-	
-	public int getId() {
-		return id;
+	private int campania_id;
+	private String campania_desce;
+	private Date fecha_alta;
+	private Date fecha_baja;
+	public int getCampania_id() {
+		return campania_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCampania_id(int campania_id) {
+		this.campania_id = campania_id;
 	}
-	public String getCampaniaDescripcion() {
-		return campaniaDescripcion;
+	public String getCampania_desce() {
+		return campania_desce;
 	}
-	public void setCampaniaDescripcion(String campaniaDescripcion) {
-		this.campaniaDescripcion = campaniaDescripcion;
+	public void setCampania_desce(String campania_desce) {
+		this.campania_desce = campania_desce;
 	}
-	public Date getFechaAlta() {
-		return fechaAlta;
+	public Date getFecha_alta() {
+		return fecha_alta;
 	}
-	public void setFechaAlta(Date fechaAlta) {
-		this.fechaAlta = fechaAlta;
+	public void setFecha_alta(Date fecha_alta) {
+		this.fecha_alta = fecha_alta;
 	}
-	public Date getFechaBaja() {
-		return fechaBaja;
+	public Date getFecha_baja() {
+		return fecha_baja;
 	}
-	public void setFechaBaja(Date fechaBaja) {
-		this.fechaBaja = fechaBaja;
+	public void setFecha_baja(Date fecha_baja) {
+		this.fecha_baja = fecha_baja;
 	}
+
 }
