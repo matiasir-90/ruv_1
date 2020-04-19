@@ -53,10 +53,10 @@ private CalendarioEntity toEntity(CalendarioModel model) {
 	return entity;
 }
 @Override
-public CalendarioEntity listarId(int id) {
+public CalendarioModel listarId(int id) {
     Optional<CalendarioEntity> optional = repositorio.findById(id);
     if (optional.isPresent()){
-        return optional.get();
+        return toModel(optional.get());
     }
     return null;
 }

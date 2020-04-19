@@ -19,7 +19,7 @@ public interface CalendarioService {
 
 	List<CalendarioModel> getCalendario();
 	CalendarioEntity add(CalendarioModel p);
-	CalendarioEntity listarId(int id);
+	CalendarioModel listarId(int id);
 	CalendarioEntity edit(CalendarioModel p);
 	CalendarioEntity delete(int id);
 }

@@ -36,7 +36,7 @@ public CalendarioEntity agregarC(@RequestBody CalendarioModel p){
     return service.add(p);
 }
 @GetMapping(path = {"/{id}"})
-public CalendarioEntity listarId(@PathVariable("id")int id){
+public CalendarioModel listarId(@PathVariable("id")int id){
 
     System.out.println(service.listarId(id));
     return service.listarId(id);

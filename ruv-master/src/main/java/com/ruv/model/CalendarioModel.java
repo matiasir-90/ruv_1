@@ -1,13 +1,18 @@
 package com.ruv.model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class CalendarioModel {
 	
 	private int calendario_id;
 
 	private String calendario_desce;
-	private Date fecha_inicio;
+	@DateTimeFormat(pattern="dd-MM-yyyy")
+	private LocalDate fecha_inicio;
 	private Date fecha_fin;
 	
 	public int getCalendario_id() {
@@ -22,10 +27,10 @@ public class CalendarioModel {
 	public void setCalendario_desce(String calendario_desce) {
 		this.calendario_desce = calendario_desce;
 	}
-	public Date getFecha_inicio() {
+	public LocalDate getFecha_inicio() {
 		return fecha_inicio;
 	}
-	public void setFecha_inicio(Date fecha_inicio) {
+	public void setFecha_inicio(LocalDate fecha_inicio) {
 		this.fecha_inicio = fecha_inicio;
 	}
 	public Date getFecha_fin() {
