@@ -3,15 +3,15 @@ package com.ruv.model;
 public class RolModel {
 
 	
-	private int id;
+	private int rol_id;
 	private String rolDescripcion;
 	
 	
-	public int getId() {
-		return id;
+	public int getRol_id() {
+		return rol_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setRol_id(int id) {
+		this.rol_id = id;
 	}
 	public String getRolDescripcion() {
 		return rolDescripcion;

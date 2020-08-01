@@ -37,8 +37,8 @@ public List<UsuarioModel> getUsuario() {
 
 private UsuarioModel toModel(UsuarioEntity entity) {
 	UsuarioModel model = new UsuarioModel();
-	model.setId(entity.getUsuario_id());
-	model.setUsuarioDescripcion(entity.getUsuario_desc());
+	model.setUsuario_id(entity.getUsuario_id());
+	model.setUsuario_desc(entity.getUsuario_desc());
 	model.setRol_id(entity.getRol());
 	model.setPassword(entity.getPassword());
 	model.setFecha_alta(entity.getFecha_alta());
@@ -50,8 +50,8 @@ private UsuarioModel toModel(UsuarioEntity entity) {
 
 private UsuarioEntity toEntity(UsuarioModel model) {
 	UsuarioEntity entity = new UsuarioEntity();
-	entity.setUsuario_id(model.getId());
-	entity.setUsuario_desc(model.getUsuarioDescripcion());
+	entity.setUsuario_id(model.getUsuario_id());
+	entity.setUsuario_desc(model.getUsuario_desc());
 	entity.setRol(model.getRol_id());
 	entity.setPassword(model.getPassword());
 	entity.setMail(model.getMail());

@@ -39,6 +39,7 @@ public class CalendarioEntity implements Serializable {
     }
 
     public CalendarioEntity(Integer calendario_id, String calendario_desce, LocalDate fecha_inicio, LocalDate fecha_fin) {
+
         this.calendario_id = calendario_id;
         this.calendario_desce = calendario_desce;
         this.fecha_inicio = fecha_inicio;

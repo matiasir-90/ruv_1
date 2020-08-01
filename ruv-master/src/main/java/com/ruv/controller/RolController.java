@@ -39,7 +39,7 @@ public RolEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public RolEntity editar(@RequestBody RolModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setRol_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

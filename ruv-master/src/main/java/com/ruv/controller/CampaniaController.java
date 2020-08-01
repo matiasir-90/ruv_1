@@ -39,7 +39,7 @@ public CampaniaEntity lsitarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public CampaniaEntity editar(@RequestBody CampaniaModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setCampania_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

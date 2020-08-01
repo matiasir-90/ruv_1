@@ -39,7 +39,7 @@ public DetalleVacunacionEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public DetalleVacunacionEntity editar(@RequestBody DetalleVacunacionModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setDet_vac_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

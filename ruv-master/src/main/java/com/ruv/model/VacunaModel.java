@@ -18,6 +18,7 @@ public class VacunaModel {
     private Date fecha_alta;
     private Date fecha_baja;
     private Date fecha_ult_mod;
+    
 	public Integer getVacuna_id() {
 		return vacuna_id;
 	}

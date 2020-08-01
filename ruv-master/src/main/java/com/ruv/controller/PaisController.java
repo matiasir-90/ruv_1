@@ -39,7 +39,7 @@ public PaisEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public PaisEntity editar(@RequestBody PaisModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setPais_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

@@ -6,8 +6,8 @@ import com.ruv.entity.RolEntity;
 public class UsuarioModel {
 
 	
-	private int id;
-	private String usuarioDescripcion;
+	private int usuario_id;
+	private String usuario_desc;
 	private RolEntity rol_id;
 	private String password;
     private String mail;
@@ -16,17 +16,18 @@ public class UsuarioModel {
     private int contador;
     private char habilitado;
     
-	public int getId() {
-		return id;
+
+	public int getUsuario_id() {
+		return usuario_id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setUsuario_id(int usuario_id) {
+		this.usuario_id = usuario_id;
 	}
-	public String getUsuarioDescripcion() {
-		return usuarioDescripcion;
+	public String getUsuario_desc() {
+		return usuario_desc;
 	}
-	public void setUsuarioDescripcion(String usuarioDescripcion) {
-		this.usuarioDescripcion = usuarioDescripcion;
+	public void setUsuario_desc(String usuario_desc) {
+		this.usuario_desc = usuario_desc;
 	}
 	public RolEntity getRol_id() {
 		return rol_id;

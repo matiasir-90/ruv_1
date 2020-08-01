@@ -37,14 +37,14 @@ public List<RolModel> getRol() {
 
 private RolModel toModel(RolEntity entity) {
 	RolModel model = new RolModel();
-	model.setId(entity.getRol_id());
+	model.setRol_id(entity.getRol_id());
 	model.setRolDescripcion(entity.getRol_desc());
 	return model;
 }
 
 private RolEntity toEntity(RolModel model) {
 	RolEntity entity = new RolEntity();
-	entity.setRol_id(model.getId());
+	entity.setRol_id(model.getRol_id());
 	entity.setRol_desc(model.getRolDescripcion());
 	return entity;
 }

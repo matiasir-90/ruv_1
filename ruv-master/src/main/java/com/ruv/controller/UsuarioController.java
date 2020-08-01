@@ -39,7 +39,7 @@ public UsuarioEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public UsuarioEntity editar(@RequestBody UsuarioModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setUsuario_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})
