@@ -37,19 +37,19 @@ public List<CalendarioModel> getCalendario() {
 
 private CalendarioModel toModel(CalendarioEntity entity) {
 	CalendarioModel model = new CalendarioModel();
-	model.setId(entity.getCalendario_id());
-	model.setCalendarioDescripcion(entity.getCalendario_desce());
-	model.setFechaInicio(entity.getFecha_inicio());
-	model.setFechaFin(entity.getFecha_fin());
+	model.setCalendario_id(entity.getCalendario_id());
+	model.setCalendario_desce(entity.getCalendario_desce());
+	model.setFecha_inicio(entity.getFecha_inicio());
+	model.setFecha_fin(entity.getFecha_fin());
 	return model;
 }
 
 private CalendarioEntity toEntity(CalendarioModel model) {
 	CalendarioEntity entity = new CalendarioEntity();
-	entity.setCalendario_id(model.getId());
-	entity.setCalendario_desce(model.getCalendarioDescripcion());
-	entity.setFecha_inicio(model.getFechaInicio());
-	entity.setFecha_fin(model.getFechaFin());
+	entity.setCalendario_id(model.getCalendario_id());
+	entity.setCalendario_desce(model.getCalendario_desce());
+	entity.setFecha_inicio(model.getFecha_inicio());
+	entity.setFecha_fin(model.getFecha_fin());
 	return entity;
 }
 @Override

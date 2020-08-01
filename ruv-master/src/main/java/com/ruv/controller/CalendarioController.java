@@ -39,7 +39,7 @@ public CalendarioEntity listarId(@PathVariable("id")int id){
 }
 @PutMapping(path = {"/{id}"})
 public CalendarioEntity editar(@RequestBody CalendarioModel p,@PathVariable("id") int id){
-    p.setId(id);
+    p.setCalendario_id(id);
     return service.edit(p);
 }
 @DeleteMapping(path = {"/{id}"})

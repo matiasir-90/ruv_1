@@ -6,7 +6,7 @@
 package com.ruv.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 import javax.persistence.*;
 
 /**
@@ -30,15 +30,15 @@ public class CalendarioEntity implements Serializable {
     private String calendario_desce;
     @Basic(optional = false)
     @Column(name = "fecha_inicio")
-    private Date fecha_inicio;
+    private LocalDate fecha_inicio;
     @Basic(optional = false)
     @Column(name = "fecha_fin")
-    private Date fecha_fin;
+    private LocalDate fecha_fin;
 
     public CalendarioEntity() {
     }
 
-    public CalendarioEntity(Integer calendario_id, String calendario_desce, Date fecha_inicio, Date fecha_fin) {
+    public CalendarioEntity(Integer calendario_id, String calendario_desce, LocalDate fecha_inicio, LocalDate fecha_fin) {
         this.calendario_id = calendario_id;
         this.calendario_desce = calendario_desce;
         this.fecha_inicio = fecha_inicio;
@@ -61,19 +61,19 @@ public class CalendarioEntity implements Serializable {
         this.calendario_desce = calendario_desce;
     }
 
-    public Date getFecha_inicio() {
+    public LocalDate getFecha_inicio() {
         return fecha_inicio;
     }
 
-    public void setFecha_inicio(Date fecha_inicio) {
+    public void setFecha_inicio(LocalDate fecha_inicio) {
         this.fecha_inicio = fecha_inicio;
     }
 
-    public Date getFecha_fin() {
+    public LocalDate getFecha_fin() {
         return fecha_fin;
     }
 
-    public void setFecha_fin(Date fecha_fin) {
+    public void setFecha_fin(LocalDate fecha_fin) {
         this.fecha_fin = fecha_fin;
     }
 
