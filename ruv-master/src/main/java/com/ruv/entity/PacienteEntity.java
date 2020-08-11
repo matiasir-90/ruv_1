@@ -1,6 +1,7 @@
 package com.ruv.entity;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 
 import javax.persistence.Basic;
@@ -31,7 +32,7 @@ import javax.persistence.Table;
 	    private String dni;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_nac")
-	    private Date fecha_nac;
+	    private LocalDate fecha_nac;
 	    @Basic(optional = false)
 	    @Column(name = "direccion")
 	    private String direccion;
@@ -63,10 +64,10 @@ import javax.persistence.Table;
 		public void setDni(String dni) {
 			this.dni = dni;
 		}
-		public Date getFecha_nac() {
+		public LocalDate getFecha_nac() {
 			return fecha_nac;
 		}
-		public void setFecha_nac(Date fecha_nac) {
+		public void setFecha_nac(LocalDate fecha_nac) {
 			this.fecha_nac = fecha_nac;
 		}
 		public String getDireccion() {

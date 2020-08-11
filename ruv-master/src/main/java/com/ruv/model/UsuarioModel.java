@@ -1,5 +1,6 @@
 package com.ruv.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import com.ruv.entity.RolEntity;
@@ -11,8 +12,8 @@ public class UsuarioModel {
 	private RolEntity rol_id;
 	private String password;
     private String mail;
-    private Date fecha_alta;
-    private Date fecha_baja;
+    private LocalDate fecha_alta;
+    private LocalDate fecha_baja;
     private int contador;
     private char habilitado;
     
@@ -47,16 +48,16 @@ public class UsuarioModel {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-	public Date getFecha_alta() {
+	public LocalDate getFecha_alta() {
 		return fecha_alta;
 	}
-	public void setFecha_alta(Date fecha_alta) {
+	public void setFecha_alta(LocalDate fecha_alta) {
 		this.fecha_alta = fecha_alta;
 	}
-	public Date getFecha_baja() {
+	public LocalDate getFecha_baja() {
 		return fecha_baja;
 	}
-	public void setFecha_baja(Date fecha_baja) {
+	public void setFecha_baja(LocalDate fecha_baja) {
 		this.fecha_baja = fecha_baja;
 	}
 	public int getContador() {

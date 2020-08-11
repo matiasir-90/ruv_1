@@ -1,7 +1,7 @@
 package com.ruv.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -44,13 +44,13 @@ import javax.persistence.Table;
 	    private char campania;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_alta")
-	    private Date fecha_alta;
+	    private LocalDate fecha_alta;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_baja")
-	    private Date fecha_baja;
+	    private LocalDate fecha_baja;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_ult_md")
-	    private Date fecha_ult_mod;
+	    private LocalDate fecha_ult_mod;
 	    
 	    
 	    
@@ -98,22 +98,22 @@ import javax.persistence.Table;
 		public void setCampania(char campania) {
 			this.campania = campania;
 		}
-		public Date getFecha_alta() {
+		public LocalDate getFecha_alta() {
 			return fecha_alta;
 		}
-		public void setFecha_inicio(Date fecha_alta) {
+		public void setFecha_inicio(LocalDate fecha_alta) {
 			this.fecha_alta = fecha_alta;
 		}
-		public Date getFecha_baja() {
+		public LocalDate getFecha_baja() {
 			return fecha_baja;
 		}
-		public void setFecha_baja(Date fecha_baja) {
+		public void setFecha_baja(LocalDate fecha_baja) {
 			this.fecha_baja = fecha_baja;
 		}
-		public Date getFecha_ult_mod() {
+		public LocalDate getFecha_ult_mod() {
 			return fecha_ult_mod;
 		}
-		public void setFecha_ult_mod(Date fecha_ult_mod) {
+		public void setFecha_ult_mod(LocalDate fecha_ult_mod) {
 			this.fecha_ult_mod = fecha_ult_mod;
 		}
 		

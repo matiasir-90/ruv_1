@@ -1,5 +1,6 @@
 package com.ruv.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import com.ruv.entity.LocalidadEntity;
@@ -10,7 +11,7 @@ public class PacienteModel {
 	private int paciente_id;
 	private String paciente_desc;
 	private String dni;
-	private Date fecha_nac;
+	private LocalDate fecha_nac;
 	private String direccion;
 	private String cod_postal;
 	private LocalidadEntity localidad ;
@@ -35,10 +36,10 @@ public class PacienteModel {
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
-	public Date getFecha_nac() {
+	public LocalDate getFecha_nac() {
 		return fecha_nac;
 	}
-	public void setFecha_nac(Date fecha_nac) {
+	public void setFecha_nac(LocalDate fecha_nac) {
 		this.fecha_nac = fecha_nac;
 	}
 	public String getDireccion() {

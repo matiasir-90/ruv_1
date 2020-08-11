@@ -2,7 +2,8 @@ package com.ruv.entity;
 
 
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDate;
+
 import javax.persistence.*;
 
 @Entity
@@ -20,10 +21,10 @@ import javax.persistence.*;
 	    private String campania_desce;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_alta")
-	    private Date fecha_alta;
+	    private LocalDate fecha_alta;
 	    @Basic(optional = false)
 	    @Column(name = "fecha_baja")
-	    private Date fecha_baja;
+	    private LocalDate fecha_baja;
 
 	    public CampaniaEntity() {
 	    }
@@ -44,19 +45,19 @@ import javax.persistence.*;
 			this.campania_desce = campania_desce;
 		}
 
-		public Date getFecha_alta() {
+		public LocalDate getFecha_alta() {
 			return fecha_alta;
 		}
 
-		public void setFecha_alta(Date fecha_alta) {
+		public void setFecha_alta(LocalDate fecha_alta) {
 			this.fecha_alta = fecha_alta;
 		}
 
-		public Date getFecha_baja() {
+		public LocalDate getFecha_baja() {
 			return fecha_baja;
 		}
 
-		public void setFecha_baja(Date fecha_baja) {
+		public void setFecha_baja(LocalDate fecha_baja) {
 			this.fecha_baja = fecha_baja;
 		}
 
