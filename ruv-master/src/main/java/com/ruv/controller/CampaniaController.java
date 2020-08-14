@@ -34,7 +34,7 @@ public CampaniaEntity agregarC(@RequestBody CampaniaModel p){
     return service.add(p);
 }
 @GetMapping(path = {"/{id}"})
-public CampaniaEntity lsitarId(@PathVariable("id")int id){
+public CampaniaEntity listarId(@PathVariable("id")int id){
     return service.listarId(id);
 }
 @PutMapping(path = {"/{id}"})
